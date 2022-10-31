@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+header {
+    text-align: center;
+    background-color: #166c96;
+    height: 160px;
+    display: flex;
+    justify-content:space-around;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+}
+.botonContenedor {   
+    text-align: center;
+    display: flex;
+    gap:50px;
+    justify-content: center;   
+    background-color: #edeae1; 
+    height: 100px;
+    align-items: center;
+    
+}
+
+.botonesIndex{
+    background-color: #edeae1;
+    height: 40px;
+    background-color: #cd2028;
+    border-width: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 120px;
+    color: white;
+    cursor: pointer;
+
+}
+.botonesIndex:hover{   
+    color:black;
+}
+
+.formularioCrear{ 
+    
+    margin-top: 60px;
+    background-color: #1b2651;    
+    padding-top: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.inputForms {
+    width: 670px;
+    margin-left: 10px;
+   
+
+}
+
+.botonEnviar{    
+    margin-top: 30px;
+    width: 100px;
+    background-color: #cd2028;
+    color:white;
+    height: 30px;
+    border-width: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);    
+    cursor: pointer;
+    align-self: center;
+    margin-top: auto;  
+}
+
+.botonEnviar:hover{    
+    color:black;
+
+}
+
+.labelForms{
+    color:white;    
+    margin-left: 15px;    
+}
+
+.eventosCss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#error_nombre{
+    display:none;
+    color:red;
+    margin-left: 15px;
+}
+
+#error_Sueldo{
+    display:none;
+    color:red;
+    margin-left: 15px;
+}
+
+#SpanError_Monto,#SpanError_MontoSuperado{
+    display:none;
+    color:red;
+    margin-left: 15px;
+}
+
+#spanError3o6o12{
+    display:none;
+    color:red;
+    margin-left: 15px;
+}
+
+#spanError6o12,#SpanError_NombreBuscar,#SpanError_NombreBorrar,#SpanError_NombreFiltrar{
+    display:none;
+    color:red;
+    margin-left: 15px;    
+}
+
+.mostrar_busqueda{
+    margin-top: 60px;
+    border: solid 3px black;
+    padding:15px;
+    margin-bottom: 20px;
+    background-color: #1b2651;
+    color: white;
+}
+
+.mostrar_busqueda h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline #cd2028;
+}
+
+.mostrar_busqueda p{    
+    margin-bottom: 5px;
+}
+
+.imgLoading{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    
+}
+
+@media (min-width: 1px) and (max-width: 599px) {
+
+
+.botonContenedor{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    height: 150px;
+
+
+}
+    
+.formularioCrear {
+    width: 300px;
+    height: 350px;
+    margin-bottom: 30px;
+} 
+    
+
+.inputForms {
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+}

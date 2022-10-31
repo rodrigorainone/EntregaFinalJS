@@ -19,7 +19,7 @@ let filtrados;
 
 // clases
 
-class credito {
+class Credito {
     constructor(nombre,sueldo,monto,cuotas,valorCuota,fecha){
         this.nombre=nombre;        
         this.sueldo=sueldo;
@@ -91,7 +91,7 @@ function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEv
                 cantCuotas = getCuotas1;
                 cantCuotas=parseInt(cantCuotas);
                 montoCuotas = credito/getCuotas1;                
-                arregloContenedor.push(new credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                                         // push y lo carga en el local storage
+                arregloContenedor.push(new Credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                                         // push y lo carga en el local storage
                 localStorage.setItem('arreglo', JSON.stringify(arregloContenedor)); 
                         
             }            
@@ -127,7 +127,7 @@ function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEv
                 cantCuotas = getCuotas2;
                 cantCuotas=parseInt(cantCuotas);
                 montoCuotas = credito/getCuotas2;
-                arregloContenedor.push(new credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                                         // push y lo carga en el local storage
+                arregloContenedor.push(new Credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                                         // push y lo carga en el local storage
                 localStorage.setItem('arreglo', JSON.stringify(arregloContenedor));
                 
             }
@@ -140,7 +140,7 @@ function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEv
                                 </div>`; 
             cantCuotas=12;
             montoCuotas=credito/12;  
-            arregloContenedor.push(new credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                             // push y lo carga en el local storage
+            arregloContenedor.push(new Credito(nombre,sueldo,montoCredito,cantCuotas,montoCuotas,fecha));                             // push y lo carga en el local storage
             localStorage.setItem('arreglo', JSON.stringify(arregloContenedor));                                   
     }    
 }

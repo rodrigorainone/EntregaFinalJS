@@ -73,12 +73,7 @@ function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEv
         getCuotas1.addEventListener('input',(e)=>{
             const getInputSpanError3o6o12 = document.querySelector("#spanError3o6o12");
             validarCuotas = check3o6o12(e.target.value);
-            if (validarCuotas){
-                getInputSpanError3o6o12.style.display="none";
-            }
-            else{
-                getInputSpanError3o6o12.style.display="block";
-            }
+            validarCuotas?getInputSpanError3o6o12.style.display="none":getInputSpanError3o6o12.style.display="block";            
         });
         const getFormCuotas1 = document.querySelector("#formulario1cuotas");
         getFormCuotas1.onsubmit = (e)=> {
@@ -109,12 +104,7 @@ function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEv
         getCuotas2.addEventListener('input',(e)=>{
             const getInputSpanError6o12 = document.querySelector("#spanError6o12");
             validarCuotas = check6o12(e.target.value);
-            if (validarCuotas){
-                getInputSpanError6o12.style.display="none";
-            }
-            else{
-                getInputSpanError6o12.style.display="block";
-            }
+            validarCuotas?getInputSpanError6o12.style.display="none":getInputSpanError6o12.style.display="block";            
         });
         const getFormCuotas2 = document.querySelector("#formulario2cuotas");
         getFormCuotas2.onsubmit = (e) => {

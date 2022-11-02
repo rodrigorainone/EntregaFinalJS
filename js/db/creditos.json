@@ -5,7 +5,8 @@
         "monto":140000,
         "cuotas":12,
         "valorCuota":11666.67,
-        "fecha":"30/08/2020"
+        "finalizado":"30/08/2022",
+        "fecha":"30/08/2021"
     },
     {
         "nombre":"rodolfo",       
@@ -13,7 +14,8 @@
         "monto":50000,
         "cuotas":6,
         "valorCuota":8333.33,
-        "fecha":"30/10/2022"
+        "finalizado":"30/04/2022",
+        "fecha":"30/10/2021"
     },
     {
         "nombre":"matias",       
@@ -21,6 +23,7 @@
         "monto":80000,
         "cuotas":12,
         "valorCuota":6666.67,
+        "finalizado":"05/05/2022",
         "fecha":"05/05/2021"
     },
     {
@@ -29,7 +32,8 @@
         "monto":30000,
         "cuotas":3,
         "valorCuota":10000.00,
-        "fecha":"25/09/2022"
+        "finalizado":"05/12/2021",
+        "fecha":"25/09/2021"
     },
     {
         "nombre":"marisa",       
@@ -37,6 +41,7 @@
         "monto":68000,
         "cuotas":12,
         "valorCuota":5666.67,
+        "finalizado":"07/04/2022",
         "fecha":"07/04/2021"
     },
     {
@@ -45,7 +50,8 @@
         "monto":55000,
         "cuotas":6,
         "valorCuota":9166.67,
-        "fecha":"05/03/2018"
+        "finalizado":"05/09/2022",
+        "fecha":"05/03/2021"
     },
     {
         "nombre":"santiago",       
@@ -53,6 +59,7 @@
         "monto":150000,
         "cuotas":12,
         "valorCuota":12500.00,
+        "finalizado":"05/05/2022",
         "fecha":"05/05/2021"
     }
 ]

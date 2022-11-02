@@ -57,7 +57,7 @@ function afectacionMensualPermitida(sueldo,credito){                        //se
 }
 
 function cantidadCuotasPermitida (cuotasTres,cuotasSeis,cuotasDoce,credito,getEventos){                          // te dice en cuantas cuotas podes sacar el prestamo . si el monto de la cuota supera mas del 20% no lo podes sacar en esa cantidad de cuotas    
-    const DateTime = luxon.DateTime;
+    const DateTime = luxon.DateTime;                                                                               // usa la libreria luxon para poner la fecha el dia del credito 
     const now = DateTime.now();    
     let fecha = now.setLocale().toLocaleString(); 
     if ((cuotasTres==true) && (cuotasSeis==true) && (cuotasDoce==true)) {                                 // en todas las cuotas disposibles 3 , 6 o 12 
@@ -414,7 +414,7 @@ function filtrarArreglo(){                                                      
                                                         <p>Sueldo : $${element.sueldo} </p>
                                                         <p>Monto : $${element.monto} </p>
                                                         <p>Cuotas : ${element.cuotas} </p>
-                                                        <p>Valor de La Cuota : $${element.valorCuota.toFixed(2)} </p>
+                                                        <p>Valor de La Cuota : $${element.valorCuota.toFixed(2)} </p>                                                        
                                                     </div>`  
                         })    
                     } 
@@ -424,33 +424,37 @@ function filtrarArreglo(){                                                      
     }
 }
 
-function mostrarCreditosRapi(){                         // muestra los creditos de la (base de datos) json creada por mi .base de datos es una forma de decir . y los muestra en pantalla 
-    let creditosRapi = [];
+function mostrarCreditosFin(){                         // muestra los creditos de la (base de datos) json creada por mi .base de datos es una forma de decir . y los muestra en pantalla 
+    
     fetch('./js/db/creditos.json')                      // pide los datos en el json local 
         .then((response) => response.json())
-        .then(data => { creditosRapi = data});
-    const getBotonRapi = document.querySelector("#mostrarArregloRapi");
-    getBotonRapi.onclick =(e)=>{
-        e.preventDefault();
-        const getEventos = document.querySelector("#eventos");
-        getEventos.innerHTML=``;
-        let cargando = document.createElement("div");
-        cargando.innerHTML=`<img class="imgLoading" src="./img/Double Ring1-1s-200px.gif" alt="" srcset="">`;       
-        getEventos.appendChild(cargando);
-        setTimeout(()=>{
-            cargando.remove();
-            creditosRapi.forEach((element)=>{
-                getEventos.innerHTML+=`<div class="mostrar_busqueda">                    
-                <h2>Credito de ${element.nombre}</h2>
-                <p>Fecha : ${element.fecha}</p>
-                <p>Sueldo : $${element.sueldo} </p>
-                <p>Monto : $${element.monto} </p>
-                <p>Cuotas : ${element.cuotas} </p>
-                <p>Valor de La Cuota : $${element.valorCuota.toFixed(2)} </p>
-                </div>`    
-            });
-        },1000);
-    };
+        .then( data =>{
+            const getBotonFin = document.querySelector("#mostrarArregloFin");
+            getBotonFin.onclick =(e)=>{
+                e.preventDefault();
+                const getEventos = document.querySelector("#eventos");
+                getEventos.innerHTML=``;
+                let cargando = document.createElement("div");
+                cargando.innerHTML=`<img class="imgLoading" src="./img/Double Ring1-1s-200px.gif" alt="" srcset="">`;       
+                getEventos.appendChild(cargando);
+                setTimeout(()=>{
+                    cargando.remove();
+                    data.forEach((element)=>{
+                        getEventos.innerHTML+=`<div class="mostrar_busqueda">                    
+                        <h2>Credito de ${element.nombre}</h2>
+                        <p>Fecha : ${element.fecha}</p>
+                        <p>Sueldo : $${element.sueldo} </p>
+                        <p>Monto : $${element.monto} </p>
+                        <p>Cuotas : ${element.cuotas} </p>
+                        <p>Valor de La Cuota : $${element.valorCuota.toFixed(2)} </p>
+                        <p>Fecha Finalizado : ${element.finalizado} </p>
+                        </div>`;
+                    });
+                },1000);
+            };
+        });
+   
+    
 }
 
 // programa principal 
@@ -460,7 +464,7 @@ buscarCredito();
 borrarCredito();
 mostrarArreglo ();
 filtrarArreglo();     
-mostrarCreditosRapi();
+mostrarCreditosFin();
 
 
 
